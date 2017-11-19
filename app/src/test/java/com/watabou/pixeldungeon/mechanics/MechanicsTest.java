@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 /**
  * Created by arjun on 19/11/17.
  */
-public class BallisticaTest {
+public class MechanicsTest {
     @Before
     public void setUp() throws Exception {
     }
@@ -20,7 +20,7 @@ public class BallisticaTest {
 
     @Test
     public void testSimple()    {
-        fail("not implemented");
+        fail("MechanicsTest not implemented");
     }
 
 }
