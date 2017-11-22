@@ -108,6 +108,32 @@ public class ItemTest {
         assertEquals(MAX, item.durability());
     }
 
+    @Test
+    public void test_polish()   {
+        // call polish() and ensure durability gets incremented
+
+        final int INIT_DURABILITY = -10;
+        final int INCREMENT_LIMIT = 5;
+
+        item.durability = INIT_DURABILITY;
+
+        assertEquals(INIT_DURABILITY, item.durability());
+
+        item.polish();
+        assertEquals(INIT_DURABILITY + 1, item.durability());
+
+        item.polish();
+        assertEquals(INIT_DURABILITY + 2, item.durability());
+
+        /*  polish so many times so that it can't be polished any further
+            (ie., it hits its max durability)
+        */
+        for(int i = 0; i <= Math.abs(INIT_DURABILITY) + item.maxDurability() + 100; i++)   {
+            item.polish();
+        }
+        assertEquals(1, item.durability());
+    }
+
     /*
         TODO: Test upgrade()
         TODO: Test upgrade(n) with n = 5
