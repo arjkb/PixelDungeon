@@ -52,6 +52,14 @@ public class ItemTest {
         assertEquals(INIT_LEVEL + UPGRADE_COUNT,item.level());
     }
 
+    @Test
+    public void test_upgrade_0() throws Exception  {
+        final int INIT_LEVEL = item.level();
+
+        item.upgrade(0);
+        assertEquals(INIT_LEVEL, item.level());
+    }
+
     /*
         TODO: Test upgrade(n) with n = 5
         TODO: Test upgrade(n) with n = 0
