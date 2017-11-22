@@ -34,7 +34,7 @@ public class ItemTest {
         assertTrue(actionList.contains(Item.AC_DROP));
         assertTrue(actionList.contains(Item.AC_THROW));
         assertEquals(2, actionList.size());
-    }
+    }   
 
     @Test
     public void test_upgrade()  {
@@ -42,5 +42,16 @@ public class ItemTest {
         item.upgrade();
         assertEquals((INIT_LEVEL + 1), item.level());
     }
+
+    /*
+        TODO: Test upgrade(n)
+        TODO: Test degrade()
+        TODO: Test degrade(n)
+        TODO: set durability < 0 and verify isBroken() returns true
+        TODO: set durability = 0 and verify isBroken() returns true
+        TODO: call fix(), and then verify isBroken() returns false
+        TODO: call fix(), and then verify durability is maximum possible
+        TODO: call polish() and ensure durability gets incremented
+    */
 
 }
