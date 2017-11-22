@@ -80,6 +80,14 @@ public class ItemTest {
 
     }
 
+    @Test
+    public void test_isBroken_after_fix()   {
+        // call fix(), and then verify isBroken() returns false
+
+        item.fix();
+        assertFalse(item.isBroken());
+    }
+
     /*
         TODO: Test upgrade()
         TODO: Test upgrade(n) with n = 5
