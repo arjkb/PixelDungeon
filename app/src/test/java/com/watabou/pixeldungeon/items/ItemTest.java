@@ -95,6 +95,19 @@ public class ItemTest {
         assertFalse(item.isBroken());
     }
 
+    @Test
+    public void test_maxDurabilityAfterFix() {
+        // call fix(), and then verify durability is maximum possible
+
+        final int MAX = item.maxDurability();
+
+        item.durability = -10;
+        assertNotEquals(MAX, item.durability());
+
+        item.fix();
+        assertEquals(MAX, item.durability());
+    }
+
     /*
         TODO: Test upgrade()
         TODO: Test upgrade(n) with n = 5
