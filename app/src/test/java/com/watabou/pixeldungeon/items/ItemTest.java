@@ -34,7 +34,7 @@ public class ItemTest {
         assertTrue(actionList.contains(Item.AC_DROP));
         assertTrue(actionList.contains(Item.AC_THROW));
         assertEquals(2, actionList.size());
-    }   
+    }
 
     @Test
     public void test_upgrade()  {
@@ -43,8 +43,18 @@ public class ItemTest {
         assertEquals((INIT_LEVEL + 1), item.level());
     }
 
+    @Test
+    public void test_upgrade_5() throws Exception{
+        final int INIT_LEVEL = item.level();
+        final int UPGRADE_COUNT = 5;
+
+        item.upgrade(UPGRADE_COUNT);
+        assertEquals(INIT_LEVEL + UPGRADE_COUNT,item.level());
+    }
+
     /*
-        TODO: Test upgrade(n)
+        TODO: Test upgrade(n) with n = 5
+        TODO: Test upgrade(n) with n = 0
         TODO: Test degrade()
         TODO: Test degrade(n)
         TODO: set durability < 0 and verify isBroken() returns true
