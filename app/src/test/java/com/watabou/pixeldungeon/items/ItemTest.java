@@ -69,11 +69,22 @@ public class ItemTest {
         assertEquals(INIT_LEVEL - 1, item.level());
     }
 
+    @Test
+    public void test_degrade_n() {
+        final int INIT_LEVEL = 10;
+        final int DEGRADE_COUNT = 3;
+        item.level(INIT_LEVEL);
+
+        item.degrade(DEGRADE_COUNT);
+        assertEquals(INIT_LEVEL - DEGRADE_COUNT, item.level());
+
+    }
+
     /*
+        TODO: Test upgrade()
         TODO: Test upgrade(n) with n = 5
-        TODO: Test upgrade(n) with n = 0
         TODO: Test degrade()
-        TODO: Test degrade(n)
+        TODO: Test degrade(n) with n = 3
         TODO: set durability < 0 and verify isBroken() returns true
         TODO: set durability = 0 and verify isBroken() returns true
         TODO: call fix(), and then verify isBroken() returns false
