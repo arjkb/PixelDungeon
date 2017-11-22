@@ -82,7 +82,7 @@ public class Item implements Bundlable {
 	protected int quantity = 1;
 	
 	private int level = 0;
-	private int durability = maxDurability();
+    int durability = maxDurability(); // FIXME: Was private. Make package-private to do unittests.
 	public boolean levelKnown = false;
 	
 	public boolean cursed;
