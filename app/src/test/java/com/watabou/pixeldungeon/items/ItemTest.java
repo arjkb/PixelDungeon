@@ -24,6 +24,7 @@ public class ItemTest {
 
     @After
     public void tearDown() throws Exception {
+        item = null;
     }
 
     @Test
@@ -33,6 +34,13 @@ public class ItemTest {
         assertTrue(actionList.contains(Item.AC_DROP));
         assertTrue(actionList.contains(Item.AC_THROW));
         assertEquals(2, actionList.size());
+    }
+
+    @Test
+    public void test_upgrade()  {
+        final int INIT_LEVEL = item.level();
+        item.upgrade();
+        assertEquals((INIT_LEVEL + 1), item.level());
     }
 
 }
