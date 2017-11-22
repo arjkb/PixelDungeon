@@ -80,21 +80,6 @@ public class ItemTest {
 
     }
 
-//    @Test
-//    public void test_isBroken_after_fix()   {
-//        // call fix(), and then verify isBroken() returns false
-//
-//        item.fix();
-//        assertFalse(item.isBroken());
-//    }
-//
-//    @Test
-//    public void test_isBroken_durability_0()    {
-//        // set durability = 0 and verify isBroken() returns true
-//        item.durability = 0;
-//        assertTrue(item.isBroken());
-//    }
-
     @Test
     public void test_isBroken() {
         item.durability = 0;
