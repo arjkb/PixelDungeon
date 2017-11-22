@@ -88,6 +88,13 @@ public class ItemTest {
         assertFalse(item.isBroken());
     }
 
+    @Test
+    public void test_isBroken_durability_0()    {
+        // set durability = 0 and verify isBroken() returns true
+        item.durability = 0;
+        assertTrue(item.isBroken());
+    }
+
     /*
         TODO: Test upgrade()
         TODO: Test upgrade(n) with n = 5
