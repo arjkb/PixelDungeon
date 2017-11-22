@@ -60,6 +60,15 @@ public class ItemTest {
         assertEquals(INIT_LEVEL, item.level());
     }
 
+    @Test
+    public void test_degrade() {
+        final int INIT_LEVEL = 10;
+        item.level(INIT_LEVEL); // set the level to 10
+
+        item.degrade();
+        assertEquals(INIT_LEVEL - 1, item.level());
+    }
+
     /*
         TODO: Test upgrade(n) with n = 5
         TODO: Test upgrade(n) with n = 0
