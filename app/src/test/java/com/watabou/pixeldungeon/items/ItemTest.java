@@ -113,7 +113,6 @@ public class ItemTest {
         // call polish() and ensure durability gets incremented
 
         final int INIT_DURABILITY = -10;
-        final int INCREMENT_LIMIT = 5;
 
         item.durability = INIT_DURABILITY;
 
