@@ -12,15 +12,28 @@ import static org.junit.Assert.*;
 public class BlobTest {
     @Before
     public void setUp() throws Exception {
+
     }
 
     @After
     public void tearDown() throws Exception {
+
     }
 
     @Test
-    public void testSimple()    {
-        fail("BlobTest not implemented!");
+    public void testBlobShapes()    {
+        Blob testBlob = new Blob();
+        //Create the blob at cell 1
+        testBlob.seed(1,1);
+        //This blob should be size 1
+        assertEquals(testBlob.volume,1);
+        //Clear the blob
+        testBlob.clear(1);
+        //the blob should now be gone
+        assertEquals(testBlob.volume,0);
+        //We should not be able to create a blob of size -1
+        testBlob.seed(1,-1);
+        assertEquals(testBlob.volume,0);
     }
 
 }
