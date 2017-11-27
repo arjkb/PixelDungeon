@@ -45,7 +45,7 @@ public class FoodTest {
 
     @Test
     public void test_execute_warrior() throws Exception {
-        hero.add(new Hunger());
+        // ensure Hero's HP values are as expected after eating food.
 
         class FoodValues    {
             HeroClass hClass;
@@ -61,7 +61,7 @@ public class FoodTest {
             }
         }
 
-        FoodValues [] foodValues = new FoodValues[11];
+        FoodValues [] foodValues = new FoodValues[6];
 
         foodValues[0] = new FoodValues(HeroClass.WARRIOR, 100, 200, 105);
         foodValues[1] = new FoodValues(HeroClass.WARRIOR, 100, 101, 101);
@@ -70,14 +70,9 @@ public class FoodTest {
         foodValues[4] = new FoodValues(HeroClass.WARRIOR, 100, 106, 105);
         foodValues[5] = new FoodValues(HeroClass.WARRIOR, 100, 90, 100);
 
-//        foodValues[6] = new FoodValues(HeroClass.ROGUE, 100, 200, 100);
-//        foodValues[7] = new FoodValues(HeroClass.ROGUE, 100, 104, 100);
-//        foodValues[8] = new FoodValues(HeroClass.ROGUE, 100, 105, 100);
-//        foodValues[9] = new FoodValues(HeroClass.ROGUE, 100, 106, 100);
-//        foodValues[10] = new FoodValues(HeroClass.ROGUE, 100, 90, 100);
-
-
         for (FoodValues fv:foodValues)  {
+            hero.add(new Hunger());
+
             hero.heroClass = fv.hClass;
             hero.HP = fv.hp;
             hero.HT = fv.ht;
@@ -85,7 +80,6 @@ public class FoodTest {
             food.execute(hero, Food.AC_EAT);
             assertEquals(fv.expected, hero.HP);
         }
-//        fail("not implemented");
     }
 
 }
