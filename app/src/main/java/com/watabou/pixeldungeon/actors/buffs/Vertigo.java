@@ -36,6 +36,7 @@ public class Vertigo extends FlavourBuff {
 	}
 	
 	public static float duration( Char ch ) {
+		System.out.println(ch);
 		Resistance r = ch.buff( Resistance.class );
 		return r != null ? r.durationFactor() * DURATION : DURATION;
 	}

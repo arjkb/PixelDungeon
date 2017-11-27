@@ -274,10 +274,10 @@ public abstract class Char extends Actor {
 		
 		HP -= dmg;
 		if (dmg > 0 || src instanceof Char) {
-			sprite.showStatus( HP > HT / 2 ? 
-				CharSprite.WARNING : 
-				CharSprite.NEGATIVE,
-				Integer.toString( dmg ) );
+//			sprite.showStatus( HP > HT / 2 ?
+//				CharSprite.WARNING :
+//				CharSprite.NEGATIVE,
+//				Integer.toString( dmg ) );
 		}
 		if (HP <= 0) {
 			die( src );
@@ -292,7 +292,7 @@ public abstract class Char extends Actor {
 	
 	public void die( Object src ) {
 		destroy();
-		sprite.die();
+		//sprite.die();
 	}
 	
 	public boolean isAlive() {

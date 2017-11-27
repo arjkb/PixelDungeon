@@ -1132,7 +1132,7 @@ public class Hero extends Char {
 	public int stealth() {
 		int stealth = super.stealth();
 		for (Buff buff : buffs( RingOfShadows.Shadows.class )) {
-			stealth += ((RingOfShadows.Shadows)buff).level;
+			stealth += ((RingOfShadows.Shadows)buff).level + 1;
 		}
 		return stealth;
 	}
@@ -1144,7 +1144,7 @@ public class Hero extends Char {
 		
 		DewVial.autoDrink( this );
 		if (isAlive()) {
-			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( sprite, 2f ) ;
+//			new Flare( 8, 32 ).color( 0xFFFF66, true ).show( sprite, 2f ) ;
 			return;
 		}
 		
@@ -1154,7 +1154,7 @@ public class Hero extends Char {
 		Ankh ankh = (Ankh)belongings.getItem( Ankh.class );
 		if (ankh == null) {
 			
-			reallyDie( cause );
+//			reallyDie( cause );
 			
 		} else {
 			

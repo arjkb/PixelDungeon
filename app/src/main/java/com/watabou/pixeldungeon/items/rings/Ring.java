@@ -108,8 +108,8 @@ public class Ring extends EquipableItem {
 	}
 	
 	public void syncGem() {
-		image	= handler.image( this );
-		gem		= handler.label( this );
+//		image	= handler.image( this );
+//		gem		= handler.label( this );
 	}
 	
 	@Override
@@ -242,7 +242,8 @@ public class Ring extends EquipableItem {
 	}
 	
 	public boolean isKnown() {
-		return handler.isKnown( this );
+//		return handler.isKnown( this );
+		return true;
 	}
 	
 	protected void setKnown() {
