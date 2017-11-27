@@ -34,6 +34,8 @@ public class FoodTest {
 
     @Test
     public void test_actions() throws Exception {
+        // positive test case -- Arjun Krishna Babu
+
         // ensure food objects contain only the 3 expected actions
 
         ArrayList<String> actionList = food.actions(hero);
@@ -45,6 +47,8 @@ public class FoodTest {
 
     @Test
     public void test_execute_warrior() throws Exception {
+        // Positive Test Case -- Arjun Krishna Babu
+
         // ensure Hero's HP values are as expected after eating food.
 
         class FoodValues    {
