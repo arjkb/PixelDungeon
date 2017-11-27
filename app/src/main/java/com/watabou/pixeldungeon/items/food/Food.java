@@ -61,13 +61,13 @@ public class Food extends Item {
 			detach( hero.belongings.backpack );
 			
 			((Hunger)hero.buff( Hunger.class )).satisfy( energy );
-			GLog.i( message );
+//			GLog.i( message ); // commented by tester
 			
 			switch (hero.heroClass) {
 			case WARRIOR:
 				if (hero.HP < hero.HT) {
 					hero.HP = Math.min( hero.HP + 5, hero.HT );
-					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 );
+//					hero.sprite.emitter().burst( Speck.factory( Speck.HEALING ), 1 ); // commented by tester
 				}
 				break;
 			case MAGE:
@@ -79,9 +79,9 @@ public class Food extends Item {
 				break;
 			}
 			
-			hero.sprite.operate( hero.pos );
+//			hero.sprite.operate( hero.pos ); // commented by tester
 			hero.busy();
-			SpellSprite.show( hero, SpellSprite.FOOD );
+//			SpellSprite.show( hero, SpellSprite.FOOD ); // commented by tester
 			Sample.INSTANCE.play( Assets.SND_EAT );
 			
 			hero.spend( TIME_TO_EAT );
