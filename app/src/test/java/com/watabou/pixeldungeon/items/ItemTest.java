@@ -38,6 +38,8 @@ public class ItemTest {
 
     @Test
     public void test_upgrade()  {
+        // positive test -- Arjun Krishna Babu
+
         final int INIT_LEVEL = item.level();
         item.upgrade();
         assertEquals((INIT_LEVEL + 1), item.level());
@@ -45,6 +47,8 @@ public class ItemTest {
 
     @Test
     public void test_upgrade_5() throws Exception{
+        // positive test case -- Arjun Krishna Babu
+
         final int INIT_LEVEL = item.level();
         final int UPGRADE_COUNT = 5;
 
@@ -54,6 +58,8 @@ public class ItemTest {
 
     @Test
     public void test_upgrade_0() throws Exception  {
+        // positive test case -- Arjun Krishna Babu
+
         final int INIT_LEVEL = item.level();
 
         item.upgrade(0);
@@ -62,6 +68,8 @@ public class ItemTest {
 
     @Test
     public void test_degrade() {
+        // positive test case -- Arjun Krishna Babu
+
         final int INIT_LEVEL = 10;
         item.level(INIT_LEVEL); // set the level to 10
 
@@ -71,17 +79,20 @@ public class ItemTest {
 
     @Test
     public void test_degrade_n() {
+        // positive test case -- Arjun Krishna Babu
+
         final int INIT_LEVEL = 10;
         final int DEGRADE_COUNT = 3;
         item.level(INIT_LEVEL);
 
         item.degrade(DEGRADE_COUNT);
         assertEquals(INIT_LEVEL - DEGRADE_COUNT, item.level());
-
     }
 
     @Test
     public void test_isBroken() {
+        // positive test case -- Arjun Krishna Babu
+
         item.durability = 0;
         assertTrue(item.isBroken());
 
@@ -110,6 +121,8 @@ public class ItemTest {
 
     @Test
     public void test_polish()   {
+        // positive test case -- Arjun Krishna Babu
+
         // call polish() and ensure durability gets incremented
 
         final int INIT_DURABILITY = -10;
