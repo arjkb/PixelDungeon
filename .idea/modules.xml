@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PixelDungeon.iml" filepath="$PROJECT_DIR$/PixelDungeon.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/source.iml" filepath="$PROJECT_DIR$/source.iml" />
       <module fileurl="file://C:\Users\Austin\Source\Repos\PixelDungeon\source.iml" filepath="C:\Users\Austin\Source\Repos\PixelDungeon\source.iml" />
     </modules>
   </component>

@@ -46,15 +46,14 @@ public class WaterOfHealth extends WellWater {
 		hero.restoreHealth = true;
 		PotionOfHealing.heal( hero );
 		hero.belongings.uncurseEquipped();
-		((Hunger)hero.buff( Hunger.class )).satisfy( Hunger.STARVING );
-		
-		CellEmitter.get( pos ).start( ShaftParticle.FACTORY, 0.2f, 3 );
 
-		Dungeon.hero.interrupt();
+//		CellEmitter.get( pos ).start( ShaftParticle.FACTORY, 0.2f, 3 );
+
+//		Dungeon.hero.interrupt();
 	
-		GLog.p( TXT_PROCCED );
+//		GLog.p( TXT_PROCCED );
 		
-		Journal.remove( Feature.WELL_OF_HEALTH );
+//		Journal.remove( Feature.WELL_OF_HEALTH );
 		
 		return true;
 	}

@@ -3,6 +3,7 @@ package com.watabou.pixeldungeon.actors.blobs;
 import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.buffs.Awareness;
 import com.watabou.pixeldungeon.actors.buffs.Buff;
+import com.watabou.pixeldungeon.actors.buffs.Hunger;
 import com.watabou.pixeldungeon.actors.buffs.Paralysis;
 import com.watabou.pixeldungeon.actors.buffs.Poison;
 import com.watabou.pixeldungeon.actors.hero.Hero;
@@ -40,9 +41,10 @@ public class WellWaterTest {
     @Test
     public void waterOfHealthTest(){
         WaterOfHealth water = new WaterOfHealth();
-        hero.restoreHealth = false;
-        hero.buffs().add(new Poison());
-        assert(water.affectHero(hero));
+        //give the hero a low health
+        hero.HP = 1;
+        water.affectHero(hero);
+        //The hero's health shall be more than one now that they drank the water
+        assertTrue(hero.HP > 1);
     }
-
 }

@@ -35,5 +35,4 @@ public class BlobTest {
         testBlob.seed(1,-1);
         assertEquals(testBlob.volume,0);
     }
-
 }
