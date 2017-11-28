@@ -86,4 +86,22 @@ public class FoodTest {
         }
     }
 
+    @Test
+    public void test_execute_multiple() {
+        // positive test case -- Arjun Krishna Babu
+
+        // call Food's execute method multiple times.
+        // crashes on 10th attempt
+
+        hero.add(new Hunger());
+
+        hero.heroClass = HeroClass.WARRIOR;
+        hero.HP = 100;
+        hero.HT = 200;
+
+        for (int i = 0; i < 10; i++)    {
+            food.execute(hero, Food.AC_EAT);
+        }
+    }
+
 }
